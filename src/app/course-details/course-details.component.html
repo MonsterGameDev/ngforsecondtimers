@@ -1,0 +1,32 @@
+<h1 class="text-center text-light">Course Details</h1>
+<div class="card">
+    <div class="text-center">
+      <img
+        class="card-img-top my-2"
+        [src]="course?.imageUrl"
+        [alt]="course?.name"
+        style="width: 150px"
+      />
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ course?.name }}</h5>
+      <div class="text-muted">{{ course?.startDate }} {{ course?.startTime }}</div>
+      <br>
+      <p class="card-text">
+          {{ course?.description }}
+          <br><br>
+          Pris: {{ course?.price }}
+      </p>
+      <div>
+        <h2>Additional Content</h2>
+        <blockquote class="blockquote">
+          <p class="mb-0">Some interesting additional content!</p>
+        </blockquote>
+      </div>
+    </div>
+    <div class="card-footer text-muted" *ngIf="course?.location">
+        {{ course?.location?.address }}
+        <br>
+        {{ course?.location?.city }}, {{ course?.location?.country }}
+    </div>
+  </div>

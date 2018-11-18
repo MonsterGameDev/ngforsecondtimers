@@ -13,7 +13,7 @@ export class CourseService {
     return COURSES;
   }
 
-  getCourses(id: number): Course {
+  getCourse(id: number): Course {
     return COURSES.find(c => c.id === id);
   }
 
