@@ -1,0 +1,25 @@
+<div class="card" class="mx-1 h-100 border-info rounded bg-white d-flex flex-column justify-content-between" style="border: 1px solid black;">
+  <div class="text-center">
+    <img
+      class="card-img-top my-2"
+      [src]="course?.imageUrl"
+      [alt]="course?.name"
+      style="width: 150px"
+    />
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ course?.name }}</h5>
+    <div class="text-muted">{{ course?.startDate }} {{ course?.startTime }}</div>
+    <br>
+    <p class="card-text">
+        {{ course?.description }}
+        <br><br>
+        Pris: {{ course?.price }}
+    </p>
+  </div>
+  <div class="card-footer text-muted" *ngIf="course?.location">
+      {{ course?.location?.address }}
+      <br>
+      {{ course?.location?.city }}, {{ course?.location?.country }}
+  </div>
+</div>
