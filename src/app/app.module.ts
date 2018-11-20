@@ -8,6 +8,8 @@ import { CourseCardComponent } from './course-card/course-card.component';
 import { CourseService } from './common/course.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
+import { CourseHttpService } from './common/course-http.service';
 
 @NgModule({
   declarations: [
@@ -15,13 +17,17 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
     CourseListComponent,
     CourseCardComponent,
     NavbarComponent,
-    CourseDetailsComponent
+    CourseDetailsComponent,
+    RxjsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule
   ],
-  providers: [CourseService],
+  providers: [
+    CourseService,
+    CourseHttpService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

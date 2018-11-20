@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseService } from '../common/course.service';
 import { Course } from '../common/course.interface';
+import { CourseHttpService } from '../common/course-http.service';
 
 @Component({
   selector: 'app-course-list',
@@ -10,10 +11,11 @@ import { Course } from '../common/course.interface';
 export class CourseListComponent implements OnInit {
   courses: Course[];
 
-  constructor(private svcCourse: CourseService) { }
+  constructor(private svcCourse: CourseHttpService) { }
 
   ngOnInit() {
-    this.courses = this.svcCourse.getAllCourses();
+    // this.courses = this.svcCourse.getAllCourses();
+    this.svcCourse.getAllCourses().subscribe(data => this.courses = data);
   }
 
 }
