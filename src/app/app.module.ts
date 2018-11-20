@@ -10,6 +10,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { CourseHttpService } from './common/course-http.service';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { HomeComponent } from './home/home.component';
+import { UsersModule } from './users/users.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,11 +22,15 @@ import { CourseHttpService } from './common/course-http.service';
     CourseCardComponent,
     NavbarComponent,
     CourseDetailsComponent,
-    RxjsComponent
+    RxjsComponent,
+    NotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    UsersModule,
+    AppRoutingModule
   ],
   providers: [
     CourseService,

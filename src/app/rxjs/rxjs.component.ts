@@ -5,7 +5,7 @@ import { COURSES } from '../common/course.service';
 import { Course } from '../common/course.interface';
 import { nextContext } from '@angular/core/src/render3';
 import { ajax } from 'rxjs/ajax';
-import { connect } from 'tls';
+
 
 @Component({
   selector: 'app-rxjs',
@@ -156,6 +156,5 @@ export class RxjsComponent implements OnInit {
 
         // subject$.connect();
     //#endregion
-}
-
+  }
 }
