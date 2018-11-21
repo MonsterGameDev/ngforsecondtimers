@@ -17,6 +17,8 @@ export class UserFormComponent implements OnInit {
   qCode: string;
   qSDate: string;
   qEDate: string;
+
+  isDirty: boolean;
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -38,6 +40,12 @@ export class UserFormComponent implements OnInit {
       this.qCode = this.route.snapshot.queryParams['code'];
       this.qSDate = this.route.snapshot.queryParams['startDate'];
       this.qEDate = this.route.snapshot.queryParams['endDate'];
+
+      this.isDirty = true;
+  }
+
+  moveAway() {
+    this.isDirty = false;
   }
 
 }

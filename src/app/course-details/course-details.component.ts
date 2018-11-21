@@ -15,8 +15,9 @@ export class CourseDetailsComponent implements OnInit {
   constructor(private svcCourse: CourseHttpService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-      const id = this.route.snapshot.params['id'];
-      this.svcCourse.getCourse(id).subscribe(d => this.course = d);
-  }
+      // const id = this.route.snapshot.params['id'];
+      // this.svcCourse.getCourse(id).subscribe(d => this.course = d);
+      this.route.data.subscribe(d => this.course = d['course']);
+    }
 
 }

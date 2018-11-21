@@ -12,8 +12,12 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 import { CourseHttpService } from './common/course-http.service';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
-import { UsersModule } from './users/users.module';
+// import { UsersModule } from './users/users.module';
 import { AppRoutingModule } from './app-routing.module';
+import { CoursesResolverService } from './common/courses-resolver.service';
+import { CourseDetailsResolverService } from './common/course-details-resolver.service';
+import { CourseDetailsActivateGuard } from './common/course-details-canactivate-guard.service';
+import { UserFormGuard } from './users/user-form/user-form-candeactivate.service';
 
 @NgModule({
   declarations: [
@@ -29,13 +33,17 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    UsersModule,
     AppRoutingModule
   ],
   providers: [
     CourseService,
-    CourseHttpService
+    CourseHttpService,
+    CoursesResolverService,
+    CourseDetailsResolverService,
+    CourseDetailsActivateGuard,
+    UserFormGuard
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent]
 })
 export class AppModule { }
