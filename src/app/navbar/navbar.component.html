@@ -16,6 +16,9 @@
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/user']">Users</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/counter']">Counter</a>
+        </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
           <a [routerLink]="['/users/1/edit']" [queryParams] = "{code:dCode, startDate:dStartDate, endDate:dEndDate}" class="mr-4">Query Params</a><!-- [queryParamsHandling] -->

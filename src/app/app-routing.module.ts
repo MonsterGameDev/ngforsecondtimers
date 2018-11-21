@@ -4,11 +4,13 @@ import { CourseListComponent } from './course-list/course-list.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
+import {CounterComponent} from './counter/counter.component';
 
 export const ROUTES = [
   { path: 'home', component: HomeComponent },
   { path: 'courses', component: CourseListComponent },
   { path: 'courses/:id', component: CourseDetailsComponent },
+  { path: 'counter', component: CounterComponent },
   { path: '', pathMatch: 'full', redirectTo: '/courses' },
   { path: '**', component: NotFoundComponent }
 ];
