@@ -14,6 +14,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
 import { UsersModule } from './users/users.module';
 import { AppRoutingModule } from './app-routing.module';
+import {CounterComponent} from './counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AppRoutingModule } from './app-routing.module';
     CourseDetailsComponent,
     RxjsComponent,
     NotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
