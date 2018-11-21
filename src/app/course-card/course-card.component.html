@@ -16,6 +16,7 @@
         <br><br>
         Pris: {{ course?.price }}
     </p>
+    <p class="text-center"><a [routerLink]="['/courses', course?.id]">Details</a></p>
   </div>
   <div class="card-footer text-muted" *ngIf="course?.location">
       {{ course?.location?.address }}

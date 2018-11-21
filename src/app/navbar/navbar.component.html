@@ -18,6 +18,11 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
+          <a [routerLink]="['/users/1/edit']" [queryParams] = "{code:dCode, startDate:dStartDate, endDate:dEndDate}" class="mr-4">Query Params</a><!-- [queryParamsHandling] -->
+          <a [routerLink]="['/users/1/edit',{code:dCode, startDate:dStartDate, endDate:dEndDate}]" class="mr-4">Optional Params</a>
+          <a [routerLink]="['/users/1/edit']" class="mr-4">Edit User 1</a>
+          <a [routerLink]="['/users/2/edit']" class="mr-4">Edit User 2</a>
+        <a [routerLink]="['/users/:id/edit']" class="mr-4">Edit User</a>
         <a [routerLink]="['/login']" class="mr-4">Login</a>
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>

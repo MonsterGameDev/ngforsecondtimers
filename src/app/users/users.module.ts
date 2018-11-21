@@ -10,8 +10,8 @@ import { PostsComponent } from './posts/posts.component';
   imports: [
     CommonModule,
     RouterModule.forChild([
-      { path: 'user', component: UserFormComponent },
-      { path: 'login', component: LoginComponent },
+      { path: 'users/:id/edit', component: UserFormComponent },
+      { path: 'login', component: LoginComponent, data: { pageTitle: 'My Page Title'} },
     ])
   ],
   providers: [],
